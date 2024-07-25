@@ -4,7 +4,7 @@ function TodoList({todos,handleComplete}){
   return(
     <div>
       <ul>
-    {todos.map((ele)=>(
+    {todos.map((todo)=>(
                 <li key={todo.id}>
               {todo.text}
             {!todo.completed && (

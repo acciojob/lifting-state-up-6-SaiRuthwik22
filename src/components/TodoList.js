@@ -9,9 +9,8 @@ function TodoList({todos,handleComplete}){
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
               {todo.text}
             </span>
-            {!todo.completed && (
-              <button onClick={() => handleComplete(todo.id)}>Complete</button>
-            )}
+            <button style={todo.completed?{display:"none"}:{display:'block'}} onClick={() => handleComplete(todo.id)}>Complete</button>
+            
           </li>
         ))}
       </ul>

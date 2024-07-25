@@ -4,10 +4,15 @@ import './../styles/App.css';
 import TodoList from "./TodoList"
 
 const App = () => {
-  let [todos,setTodos] = React.useState( [{id:1,text:"Learn React",completed:true}])
-  function handleComplete(id){
-  setTodos(todos.map((item)=>item.id == id ? {...item,completed:false}:item))
-  }
+  const [todos, setTodos] = useState([
+    { id: 1, text: 'Learn React', completed: false }
+  ]);
+
+  const handleComplete = (id) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: true } : todo
+    ));
+  };
   return (
     <div>
     <h1>Parent Component</h1>

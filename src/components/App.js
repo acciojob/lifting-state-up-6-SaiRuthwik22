@@ -4,9 +4,9 @@ import './../styles/App.css';
 import TodoList from "./TodoList"
 
 const App = () => {
-  let [todos,setTodos] = React.useState( [{id:1,text:"Learn React",completed:false}])
+  let [todos,setTodos] = React.useState( [{id:1,text:"Learn React",completed:true}])
   function handleComplete(id){
-  setTodos(todos.map((item)=>item.id == id ? {...item,completed:true}:item))
+  setTodos(todos.map((item)=>item.id == id ? {...item,completed:false}:item))
   }
   return (
     <div>

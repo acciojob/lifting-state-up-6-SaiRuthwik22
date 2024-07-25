@@ -4,7 +4,7 @@ import './../styles/App.css';
 import TodoList from "./TodoList"
 
 const App = () => {
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = React.useState([
     { id: 1, text: 'Learn React', completed: false }
   ]);
 

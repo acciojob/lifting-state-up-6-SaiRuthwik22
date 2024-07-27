@@ -3,13 +3,14 @@ import './../styles/App.css';
 import TodoList from "./TodoList"
 
 const App = () => {
-  const [todos, setTodos] = React.useState([
+  let arr = [
     { id: 1, text: 'Learn React', completed: false }
-  ]);
+  ]
+  const [todos, setTodos] = React.useState(arr);
 
-  const handleComplete = (id) => {
+  function handleComplete(id) => {
     setTodos(todos.map(todo =>
-      todo.id === id ? { ...todo, completed: true } : todo
+      todo.id == id ? { ...todo, completed: true } : todo
     ));
   };
   return (

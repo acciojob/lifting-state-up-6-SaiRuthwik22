@@ -6,12 +6,10 @@ function TodoList({todos,handleComplete}){
       <ul>
         {todos.map(todo => (
           <li key={todo.id}>
-            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
               {todo.text}
-            </span>
-            {todo.completed ? <button onClick={() => handleComplete(todo.id)}>Complete</button>:""}
-            
+            {!todo.completed ?? <button onclick={handleComplete}>Complete</button>}
           </li>
+                   
         ))}
       </ul>
     </div>

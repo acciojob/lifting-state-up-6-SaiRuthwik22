@@ -7,7 +7,7 @@ function TodoList({todos,handleComplete}){
         {todos.map(todo => (
           <li key={todo.id}>
               {todo.text}
-            {!todo.completed ?? <button onclick={handleComplete}>Complete</button>}
+            {!todo.completed && <button onclick={handleComplete}>Complete</button>}
           </li>
                    
         ))}

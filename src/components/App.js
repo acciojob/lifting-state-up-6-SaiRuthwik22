@@ -8,7 +8,7 @@ const App = () => {
   ]
   const [todos, setTodos] = React.useState(arr);
 
-  function handleComplete(id) => {
+  function handleComplete(id) {
     setTodos(todos.map(todo =>
       todo.id == id ? { ...todo, completed: true } : todo
     ));
